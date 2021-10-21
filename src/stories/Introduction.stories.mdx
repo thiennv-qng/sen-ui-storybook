@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import Icon from "../components/icon";
+import { Row, Col, Card, Button, Typography } from "antd";
+
+<Meta title="GetStarted/Introduction" />
+
+# Welcome to SenUI
+
+SenUI helps you build UI components in isolation from your app's business logic, data, and context.
+That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+
+<div className="subheading">Card</div>
+
+<Canvas>
+  <Story name="card">
+    <Row gutter={[16, 16]}>
+      <Col span={8}>
+        <Card>
+          <Typography.Text type="warning">Card content</Typography.Text>
+        </Card>
+      </Col>
+    </Row>
+  </Story>
+</Canvas>
+
+<div className="subheading">Button</div>
+
+<Canvas>
+  <Story name="button">
+    <Row gutter={[16, 16]}>
+      <Col span={8}>
+        <Button type="primary" icon={<Icon name="cog-outline" />} block>
+          primary
+        </Button>
+      </Col>
+      <Col span={8}>
+        <Button type="text" icon={<Icon name="cog-outline" />} />
+      </Col>
+    </Row>
+  </Story>
+</Canvas>
